@@ -1,0 +1,214 @@
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact !important;
+  font-family: 'Lora', serif;
+  background-color: #233c5d;
+  background-image: url(img/blue.png);
+  color: white; }
+
+.pageTop {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .pageTop h1 {
+    font-size: 2.1em;
+    margin: 0; }
+  .pageTop .location {
+    text-transform: uppercase;
+    font-size: 20px; }
+  .pageTop .logoHolder {
+    text-align: right; }
+    .pageTop .logoHolder p {
+      margin: 0;
+      text-transform: uppercase; }
+
+.chart {
+  overflow: hidden; }
+
+.p15 {
+  padding: 15px; }
+
+.container, body section.main > div {
+  padding-left: 40px;
+  padding-right: 40px; }
+
+.logo {
+  background-image: url(img/mi-logo-white.png);
+  width: 132px;
+  height: 41px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block; }
+
+section h1 {
+  font-size: 27px; }
+
+.fw-n {
+  font-weight: normal; }
+
+body {
+  font-family: 'Mulish', serif;
+  margin: 0; }
+  body p {
+    font-size: 15px; }
+  body .logo {
+    margin-top: 5px; }
+  body .chart {
+    border-radius: 25px;
+    background: white;
+    border: 1px solid #4b5b75; }
+  body h1 {
+    font-family: 'Lora', serif; }
+  body section.main {
+    display: inline-grid;
+    grid-template-rows: 70px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: white;
+    border-radius: 25px;
+    height: 787px;
+    max-height: 787px;
+    max-width: 1210px;
+    width: 1210px;
+    color: #0f264a; }
+    body section.main h1 {
+      display: inline-block; }
+    body section.main div.top .location {
+      background-color: #f2f6cc;
+      border-radius: 25px;
+      border: 1px solid #bfd202;
+      display: flex;
+      justify-content: space-between;
+      padding: 7px 10px;
+      margin-top: 20px;
+      font-size: 12px; }
+      body section.main div.top .location .name:before {
+        content: "Property:";
+        text-transform: uppercase;
+        font-weight: bold; }
+    body section.main div.bottom {
+      background-color: #ecf1f3;
+      border-radius: 0 0 25px 25px;
+      display: flex;
+      flex-flow: row wrap;
+      align-content: flex-start; }
+      body section.main div.bottom h1 {
+        margin-bottom: 5px;
+        font-weight: bold; }
+      body section.main div.bottom p {
+        margin-bottom: 10px;
+        margin-top: 0; }
+      body section.main div.bottom section.eui {
+        width: 100%; }
+        body section.main div.bottom section.eui .euiTableWrap {
+          display: flex;
+          flex-flow: row wrap; }
+          body section.main div.bottom section.eui .euiTableWrap .one, body section.main div.bottom section.eui .euiTableWrap .three {
+            margin-right: 15px;
+            width: 220px; }
+          body section.main div.bottom section.eui .euiTableWrap .three .total {
+            overflow: hidden;
+            padding: 38px 0px;
+            background-color: #bfd202;
+            border-radius: 25px; }
+            body section.main div.bottom section.eui .euiTableWrap .three .total p {
+              font-size: 12px; }
+            body section.main div.bottom section.eui .euiTableWrap .three .total span {
+              font-size: 30px; }
+          body section.main div.bottom section.eui .euiTableWrap .three .euiTop {
+            padding: 5px 15px; }
+          body section.main div.bottom section.eui .euiTableWrap .two, body section.main div.bottom section.eui .euiTableWrap .three {
+            text-align: center; }
+          body section.main div.bottom section.eui .euiTableWrap .two p {
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px; }
+          body section.main div.bottom section.eui .euiTableWrap .two, body section.main div.bottom section.eui .euiTableWrap .four {
+            flex-grow: 1;
+            max-width: 895px; }
+          body section.main div.bottom section.eui .euiTableWrap .four .chart {
+            height: 100%;
+            width: 100%; }
+            body section.main div.bottom section.eui .euiTableWrap .four .chart > div {
+              bottom: 8px;
+              left: -14px; }
+          body section.main div.bottom section.eui .euiTableWrap .break {
+            flex-basis: 100%;
+            height: 0;
+            border: none; }
+      body section.main div.bottom section.myEnergy {
+        margin-right: 50px; }
+      body section.main div.bottom section.carbonReduction {
+        margin-left: 50px; }
+        body section.main div.bottom section.carbonReduction .chart > div {
+          left: 16px; }
+        body section.main div.bottom section.carbonReduction .chart .hint {
+          font-weight: bold;
+          position: absolute;
+          font-size: 13px; }
+      body section.main div.bottom section.myEnergy, body section.main div.bottom section.carbonReduction {
+        flex: 1; }
+        body section.main div.bottom section.myEnergy .chart, body section.main div.bottom section.carbonReduction .chart {
+          height: 210px;
+          overflow: hidden; }
+      body section.main div.bottom section.myEnergy .chart {
+        position: relative; }
+        body section.main div.bottom section.myEnergy .chart .lowPerf, body section.main div.bottom section.myEnergy .chart .highPerf {
+          position: absolute;
+          font-size: 11px;
+          bottom: 25px; }
+        body section.main div.bottom section.myEnergy .chart .myLocationArrow {
+          position: absolute;
+          top: 17px;
+          font-size: 10px;
+          width: 70px;
+          text-align: center;
+          background-color: #bfd202;
+          height: 25px;
+          padding: 3px; }
+        body section.main div.bottom section.myEnergy .chart .myLocationArrow:after {
+          content: "";
+          display: inline-block;
+          border-left: 9px solid transparent;
+          border-right: 9px solid transparent;
+          border-top: 9px solid #bfd202;
+          position: absolute;
+          bottom: -9px;
+          left: 9px; }
+        body section.main div.bottom section.myEnergy .chart .lowPerf {
+          right: 15px; }
+        body section.main div.bottom section.myEnergy .chart .highPerf {
+          left: 36px; }
+        body section.main div.bottom section.myEnergy .chart .myLocation {
+          background: #bfd202;
+          width: 3px;
+          height: 130px;
+          position: absolute;
+          bottom: 40px; }
+      body section.main div.bottom section.leverLibrary {
+        padding-top: 5px; }
+        body section.main div.bottom section.leverLibrary a {
+          color: #0f264a; }
+        body section.main div.bottom section.leverLibrary table {
+          font-size: 13px;
+          width: 100%;
+          background-color: white; }
+          body section.main div.bottom section.leverLibrary table th {
+            background-color: #0f264a;
+            color: white; }
+          body section.main div.bottom section.leverLibrary table td {
+            padding: 3px; }
+          body section.main div.bottom section.leverLibrary table tr:nth-child(odd) {
+            background-color: #f2f6cc; }
+          body section.main div.bottom section.leverLibrary table tr:nth-child(even) {
+            background-color: white; }
+        body section.main div.bottom section.leverLibrary .topSectionWrap {
+          display: flex; }
+          body section.main div.bottom section.leverLibrary .topSectionWrap .content {
+            margin-right: 20px; }
+        body section.main div.bottom section.leverLibrary div.tableCta {
+          margin-top: 20px;
+          font-weight: bold; }

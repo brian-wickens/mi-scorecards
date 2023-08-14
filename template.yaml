@@ -1,0 +1,75 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  marriott Sustainability
+
+  Sample SAM Template for marriott
+
+Globals:
+  Function:
+    Runtime: nodejs14.x
+    Timeout: 90
+    Architectures: [x86_64]
+    CodeUri: .
+    Environment:
+      Variables:
+        BUCKET: !Ref S3Bucket
+        SQS: !Ref SQSService
+        DEADLETTER: !Ref DeadletterSQS
+        # Below is for testing only
+        #BUCKET: mariottsustainability
+        #SQS: https://sqs.us-east-1.amazonaws.com/155179686256/pdfqueue
+        #DEADLETTER: https://sqs.us-east-1.amazonaws.com/155179686256/pdfqueue-deadletter
+
+Resources:
+
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: mariottsustainability
+
+  SQSService:
+    Type: AWS::SQS::Queue
+    Properties:
+      RedrivePolicy:
+        deadLetterTargetArn: !GetAtt DeadletterSQS.Arn
+        maxReceiveCount: 2
+      QueueName: pdfqueue
+      VisibilityTimeout: 120
+
+  DeadletterSQS:
+    Type: AWS::SQS::Queue
+    Properties:
+      QueueName: pdfqueue-deadletter
+      VisibilityTimeout: 120
+
+  PopulateQueue:
+    Type: AWS::Serverless::Function
+    Properties:
+      MemorySize: 128
+      Handler: src/functions/PopulateQueue.handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref S3Bucket
+        - SQSSendMessagePolicy:
+            QueueName: !GetAtt SQSService.QueueName
+
+  SqsMessage:
+    Type: AWS::Serverless::Function
+    Properties:
+      # 1.5G of memory for PDF generation
+      MemorySize: 1536
+      # 2G of /tmp storage for templates
+      EphemeralStorage:
+        Size: 2048
+      Handler: src/functions/SqsMessage.handler
+      Policies:
+        - S3CrudPolicy:
+            BucketName: !Ref S3Bucket
+        - SQSSendMessagePolicy:
+            QueueName: !GetAtt DeadletterSQS.QueueName
+      Events:
+        SqsTrigger:
+          Type: SQS
+          Properties:
+            Queue: !GetAtt SQSService.Arn

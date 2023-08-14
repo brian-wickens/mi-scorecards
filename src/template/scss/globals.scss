@@ -1,0 +1,51 @@
+html{
+  -webkit-print-color-adjust: exact;
+  print-color-adjust:exact !important;
+  font-family: 'Lora', serif;
+  background-color: #233c5d;
+  background-image: url(img/blue.png);
+  color: white;
+}
+.pageTop{
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  h1{
+    font-size: 2.1em;
+    margin: 0;
+  }
+  .location{
+    text-transform: uppercase;
+    font-size: 20px;
+  }
+  .logoHolder{
+    text-align: right;
+    p{
+      margin: 0;
+      text-transform: uppercase;
+    }
+  }
+}
+.chart{
+  overflow: hidden;
+}
+.p15{
+  padding: 15px;
+}
+.container{
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.logo{
+  //background-image: url(img/marriottLogo.png);
+  background-image: url(img/mi-logo-white.png);
+  width: 132px;
+  height: 41px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+section h1{
+  font-size: 27px;
+}

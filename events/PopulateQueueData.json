@@ -1,0 +1,7 @@
+{
+  "dataFile": "validation_combined v3.csv",
+  "marshaCodes": "marsha_codes v2.csv",
+  "targetFile": "Targets - M_F Same-Table 1 v3.csv",
+  "leverFile": "Levers_Clean-Table 1 v3.csv",
+  "reportingPeriod": "2022-09-30"
+}

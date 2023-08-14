@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Marriott</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Lora::300,400,500i,900,900i,bold" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mulish::300,400,500i,900,900i" rel="stylesheet">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <section class="pageTop container">
+        <h1>
+            Your Carbon Reduction Target Summary:
+        </h1>
+        <div class="logoHolder">
+            <div class="logo"></div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="top">
+            <div class="location">
+                <div class="name">
+                    {{location.name}} ({{location.marsha}})
+                </div>
+                <div class="date">
+                    {{reportingDate}}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <section class="eui">
+                <h1>Your 2023 Energy Use Intensity (EUI) Reduction Target:</h1>
+                <p>
+                    Energy use intensity (EUI) is a measure of your hotel’s energy consumption (in kWh) over the size of the property (measured in m^2).
+                    The target indicates how much energy usage should be reduced by over the next year, with progress updated on a quarterly basis.
+                    For more detailed energy usage data, please refer to&nbsp;MESH.
+                </p>
+                <div class="euiTableWrap">
+                    <div class="one">&nbsp;</div>
+                    <div class="two">
+                        <p>Your property’s past 12 mos EUI against EUI Target</p>
+                    </div>
+                    <div class="break"></div>
+                    <div class="three">
+                        <div class="total">
+                            <div class="euiTop">
+                                <span>{{euiReduction}}</span>
+                                <p>Your property’s EUI<br>Reduction target</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="four">
+                        <div class="chart"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="myEnergy">
+                <h1>How does my carbon use compare?</h1>
+                <p>
+                    The below chart, refreshed quarterly, shows your sustainability group’s
+                    {{currentReportYear}} carbon usage compared across your broader peer group of
+                    like-type properties, as defined by Division, Brand Tier, and Climate Zone.
+                </p>
+                <div class="chart"></div>
+            </section>
+            <section class="carbonReduction">
+                <h1>What is my carbon reduction target?</h1>
+                <p>
+                    Your energy usage informs your hotel’s carbon footprint, which is
+                    calculated by applying a local emissions factor to your energy usage. The
+                    chart below depicts your current carbon footprint and 2030&nbsp;target.
+                </p>
+                <div class="chart"></div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>

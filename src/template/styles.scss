@@ -1,0 +1,240 @@
+@import "scss/globals";
+@import "scss/variables";
+.fw-n{
+  font-weight: normal;
+}
+body{
+  p{
+    font-size: 15px;
+  }
+  .logo{
+    margin-top: 5px;
+  }
+  .chart{
+    border-radius: $mainBorderRadius;
+    background: white;
+    border: 1px solid $greyBlue;
+  }
+  font-family: 'Mulish', serif;
+  h1{
+    font-family: 'Lora', serif;
+  }
+  section{
+    &.main{
+      display: inline-grid;
+      grid-template-rows: 70px;
+      margin-left: 5px;
+      margin-right: 5px;
+      background-color: $white;
+      border-radius: $mainBorderRadius;
+      height: 787px;
+      max-height: 787px;
+      max-width: 1210px;
+      width: 1210px;
+      & > div{
+        @extend .container !optional;
+      }
+      h1{
+        display: inline-block;
+      }
+      color: $darkBlue;
+
+
+      div.top{
+        .location{
+          background-color: $lightGreen;
+          border-radius: $mainBorderRadius;
+          border: 1px solid $green;
+          display: flex;
+          justify-content: space-between;
+          padding: 7px 10px;
+          margin-top: 20px;
+          font-size: 12px;
+          .name:before{
+            content: "Property:";
+            text-transform: uppercase;
+            font-weight: bold;;
+          }
+        }
+      }
+      div.bottom{
+        background-color: $grey;
+        border-radius: 0 0 $mainBorderRadius $mainBorderRadius;
+        display: flex;
+        flex-flow: row wrap;
+        align-content: flex-start;
+
+        h1{
+          margin-bottom: 5px;
+          font-weight: bold;
+        }
+        p{
+          margin-bottom: 10px;
+          margin-top: 0;
+        }
+
+        section.eui{
+          width: 100%;
+          .euiTableWrap{
+            //margin: 0px 195px;
+            display: flex;
+            flex-flow: row wrap;
+            .one, .three{
+              margin-right: 15px;
+              width: 220px
+            }
+            .three {
+              .total{
+                overflow: hidden;
+                padding: 38px 0px;
+                p{
+                  font-size: 12px;
+                }
+                span{
+                  font-size: 30px;
+                }
+                background-color: $green;
+                border-radius: $mainBorderRadius;
+                //padding: 30px 15px;
+              }
+              .euiTop{
+                padding: 5px 15px;
+              }
+            }
+            .two, .three{
+              text-align: center;
+            }
+            .two p{
+              margin: 0;
+              font-weight: bold;
+              text-transform: uppercase;
+              font-size: 14px;
+              letter-spacing: 1px;
+            }
+            .two, .four{
+              flex-grow: 1;
+              max-width: 895px;
+            }
+            .four .chart{
+              height: 100%;
+              width: 100%;
+              > div{
+                bottom: 8px;
+                left: -14px;
+              }
+            }
+            .break{
+              flex-basis: 100%;
+              height: 0;
+              border: none;
+            }
+          }
+
+        }
+        section.myEnergy{
+          margin-right: 50px;
+        }
+        section.carbonReduction{
+          margin-left: 50px;
+          .chart {
+            > div{
+              left: 16px;
+            }
+            .hint{
+              font-weight: bold;
+              position: absolute;
+              font-size: 13px;
+            }
+          }
+        }
+        section.myEnergy, section.carbonReduction{
+          flex: 1;
+          .chart{
+            height: 210px;
+            overflow: hidden;
+          }
+        }
+        section.myEnergy{
+          .chart{
+            position: relative;
+            .lowPerf, .highPerf{
+              position: absolute;
+              font-size: 11px;
+              bottom: 25px;
+            }
+            .myLocationArrow{
+              position: absolute;
+              top: 17px;
+              font-size: 10px;
+              width: 70px;
+              text-align: center;
+              background-color: $green;
+              height: 25px;
+              padding: 3px;
+            }
+            .myLocationArrow:after{
+              content: "";
+              display: inline-block;
+              border-left: 9px solid transparent;
+              border-right: 9px solid transparent;
+              border-top: 9px solid $green;
+              position: absolute;
+              bottom: -9px;
+              left: 9px;
+            }
+            .lowPerf{ right: 15px; }
+            .highPerf{ left: 36px; }
+            .myLocation{
+              background: $green;
+              width: 3px;
+              height: 130px;
+              position: absolute;
+              bottom: 40px;
+            }
+          }
+
+
+        }
+        section.leverLibrary{
+          a {
+            color: $darkBlue;
+          }
+          padding-top: 5px;
+          table {
+            font-size: 13px;
+            width: 100%;
+            background-color: $white;
+            th {
+              background-color: $darkBlue;
+              color: $white;
+            }
+            td{
+              padding: 3px;
+            }
+            tr:nth-child(odd){
+              background-color: $lightGreen
+            }
+            tr:nth-child(even){
+              background-color: $white
+            }
+          }
+          .topSectionWrap{
+            display: flex;
+            .content{
+              margin-right: 20px;
+            }
+          }
+          div.tableCta{
+            margin-top: 20px;
+            font-weight: bold;
+          }
+        }
+      }
+
+    }
+  }
+  margin: 0;
+
+}
+
+

@@ -1,0 +1,31 @@
+{
+  "name": "marriott_sustainability",
+  "version": "1.0.0",
+  "description": "sustainability scorecard generator",
+  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "author": "Curtis Holland <curtis@weareoutright.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": ">=0.21.1",
+    "chrome-aws-lambda": "^10.1.0",
+    "fs-extra": "^11.1.0",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mustache": "^4.2.0",
+    "pdf-lib": "^1.17.1",
+    "puppeteer-core": "^10.4.0",
+    "uuid": "^9.0.0"
+  },
+  "scripts": {
+    "test": "mocha src/tests/unit/",
+    "test-with-coverage": "nyc --reporter=text mocha src/tests/unit/",
+    "sass-watch": "node_modules/node-sass/bin/node-sass -w src/template/styles.scss src/template/styles.css",
+    "sass-compile": "node_modules/node-sass/bin/node-sass src/template/styles.scss src/template/styles.css"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^9.1.4",
+    "node-sass": "^8.0.0",
+    "nyc": "^15.1.0"
+  }
+}

@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Marriott</title>
+    <link href="https://fonts.googleapis.com/css?family=Lora::300,400,500i,900,900i,bold" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Mulish::300,400,500i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+    <section class="pageTop container">
+        <h1>
+            Your Carbon Reduction Target Summary:
+        </h1>
+        <div class="logoHolder">
+            <div class="logo"></div>
+        </div>
+    </section>
+    <section class="main">
+        <div class="top">
+            <div class="location">
+                <div class="name">
+                    {{location.name}} ({{location.marsha}})
+                </div>
+                <div class="date">
+                    {{reportingDate}}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <section class="leverLibrary">
+                <div class="topSectionWrap">
+                    <div class="content">
+                        <h1>How can I improve energy usage?</h1>
+                        <p>
+                            Based on an assessment of your property metrics, Marriott has identified
+                            Carbon Solutions that are likely applicable to your property to reduce energy usage:
+                        </p>
+                    </div>
+                    <div class="keyTable">
+                        <table class="key">
+                            <tr> <th>Payback</th> <th>Years</th> </tr>
+                            <tr> <td>Short</td> <td>0-3</td> </tr>
+                            <tr> <td>Medium</td> <td>4-7</td> </tr>
+                            <tr> <td>Long</td> <td>8+</td> </tr>
+                        </table>
+                    </div>
+                </div>
+                <table class="leverData"></table>
+                <div class="tableCta">
+                    <p>
+                        For immediate ways to find operational carbon reduction actions use the
+                        <a href="https://mgscloud.marriott.com/common/lodging-operations/engineering/energy/energy-environmental-audit-tool.html">
+                            Energy & Environmental Action Plan
+                        </a>
+                        <span class="fw-n">
+                            (<a href="https://mgscloud.marriott.com/common/lodging-operations/engineering/energy/energy-environmental-audit-tool.html">https://mgscloud.marriott.com/common/lodging-operations/engineering/energy/energy-environmental-audit-tool.html</a>).
+                        </span>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+</body>
+</html>
